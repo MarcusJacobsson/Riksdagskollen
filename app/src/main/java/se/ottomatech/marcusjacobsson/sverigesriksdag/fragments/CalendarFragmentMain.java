@@ -11,9 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.roomorama.caldroid.CaldroidFragment;
-import com.roomorama.caldroid.CaldroidListener;
-
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
@@ -21,11 +18,9 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 
 import se.ottomatech.marcusjacobsson.sverigesriksdag.R;
-import se.ottomatech.marcusjacobsson.sverigesriksdag.activities.CalendarListActivity;
+import se.ottomatech.marcusjacobsson.sverigesriksdag.activities.CalendarCommitteeMenuListActivity;
 import se.ottomatech.marcusjacobsson.sverigesriksdag.pojo.CalendarPojo;
 import se.ottomatech.marcusjacobsson.sverigesriksdag.xmlparsers.CalendarXmlParser;
 
@@ -36,6 +31,15 @@ public class CalendarFragmentMain extends Fragment implements View.OnClickListen
 
     private ProgressDialog progressDialog;
     private DownloadCalendarDataTask downloadCalendarDataTask;
+    private CalendarFragmentCallback mListener;
+
+    public interface CalendarFragmentCallback {
+        public void onDownloadReady(ArrayList<CalendarPojo> list);
+    }
+
+    public void setListener(CalendarFragmentCallback listener) {
+        this.mListener = listener;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,6 +51,7 @@ public class CalendarFragmentMain extends Fragment implements View.OnClickListen
         tvChamber.setOnClickListener(this);
         tvCommittee.setOnClickListener(this);
         tvOther.setOnClickListener(this);
+
         //setUpDialog();
         return view;
     }
@@ -119,7 +124,7 @@ public class CalendarFragmentMain extends Fragment implements View.OnClickListen
                 break;
 
             case R.id.tv_calendar_fragment_committee:
-                Intent i = new Intent(getActivity(), CalendarListActivity.class);
+                Intent i = new Intent(getActivity(), CalendarCommitteeMenuListActivity.class);
                 startActivityForResult(i, 1);
                 break;
 
@@ -127,45 +132,6 @@ public class CalendarFragmentMain extends Fragment implements View.OnClickListen
                 downloadCalendarDataTask.execute(getResources().getString(R.string.url_calendar_other));
                 break;
         }
-    }
-
-    private void showCalendar() {
-        CaldroidFragment caldroidFragment = new CaldroidFragment();
-        Bundle args = new Bundle();
-        Calendar cal = Calendar.getInstance();
-        args.putInt(CaldroidFragment.MONTH, cal.get(Calendar.MONTH) + 1);
-        args.putInt(CaldroidFragment.YEAR, cal.get(Calendar.YEAR));
-        caldroidFragment.setArguments(args);
-
-        final CaldroidListener listener = new CaldroidListener() {
-
-            @Override
-            public void onSelectDate(Date date, View view) {
-                System.out.println(date.getTime());
-            }
-
-            @Override
-            public void onChangeMonth(int month, int year) {
-                String text = "month: " + month + " year: " + year;
-                System.out.println(text);
-            }
-
-            @Override
-            public void onLongClickDate(Date date, View view) {
-                System.out.println(date.getTime());
-            }
-
-            @Override
-            public void onCaldroidViewCreated() {
-            }
-
-        };
-
-        caldroidFragment.setCaldroidListener(listener);
-        // Insert the fragment by replacing any existing fragment
-        android.support.v4.app.FragmentTransaction t = getFragmentManager().beginTransaction();
-        t.replace(R.id.content_frame, caldroidFragment);
-        t.commit();
     }
 
     private class DownloadCalendarDataTask extends AsyncTask<String, Integer, ArrayList<CalendarPojo>> {
@@ -222,14 +188,12 @@ public class CalendarFragmentMain extends Fragment implements View.OnClickListen
         protected void onPostExecute(ArrayList<CalendarPojo> list) {
             if (list != null) {
                 super.onPostExecute(list);
-                for (CalendarPojo cal : list) {
-                    System.out.println(cal.toString());
-                }
-                showCalendar();
+                //showCalendar(list);
+                mListener.onDownloadReady(list);
             } else {
                 //TODO: error
             }
-           progressDialog.dismiss();
+            progressDialog.dismiss();
         }
     }
 }

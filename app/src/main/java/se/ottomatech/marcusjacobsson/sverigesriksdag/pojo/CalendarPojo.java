@@ -1,9 +1,12 @@
 package se.ottomatech.marcusjacobsson.sverigesriksdag.pojo;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by Marcus Jacobsson on 2015-03-21.
  */
-public class CalendarPojo {
+public class CalendarPojo implements Parcelable{
 
     private String categories;
     private String location;
@@ -137,4 +140,51 @@ public class CalendarPojo {
                 ", comment='" + comment + '\'' +
                 '}';
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(categories);
+        dest.writeString(location);
+        dest.writeString(uid);
+        dest.writeString(transp);
+        dest.writeString(dtStart);
+        dest.writeString(dtEnd);
+        dest.writeString(created);
+        dest.writeString(lastModified);
+        dest.writeString(summary);
+        dest.writeString(description);
+        dest.writeString(comment);
+    }
+
+    private CalendarPojo(Parcel in){
+        this.categories = in.readString();
+        this.location = in.readString();
+        this.uid = in.readString();
+        this.transp = in.readString();
+        this.dtStart = in.readString();
+        this.dtEnd = in.readString();
+        this.created = in.readString();
+        this.lastModified = in.readString();
+        this.summary = in.readString();
+        this.description = in.readString();
+        this.comment = in.readString();
+    }
+
+    public static final Parcelable.Creator<CalendarPojo> CREATOR
+            = new Parcelable.Creator<CalendarPojo>() {
+        @Override
+        public CalendarPojo createFromParcel(Parcel in) {
+            return new CalendarPojo(in);
+        }
+
+        @Override
+        public CalendarPojo[] newArray(int size) {
+            return new CalendarPojo[size];
+        }
+    };
 }

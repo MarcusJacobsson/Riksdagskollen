@@ -19,8 +19,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".fragments.CalendarFragmentMain"></activity>
-        <activity android:name=".activities.CalendarListActivity"></activity>
+        <activity android:name=".activities.CalendarCommitteeMenuListActivity"></activity>
+        <activity android:name=".activities.CalendarEventListActivity"></activity>
     </application>
 
 </manifest>
