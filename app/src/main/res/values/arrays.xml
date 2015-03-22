@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="navigation_drawer_content">
+        <item>@string/navigation_drawer_content_document</item>
+        <item>@string/navigation_drawer_content_members</item>
+        <item>@string/navigation_drawer_content_voting</item>
+        <item>@string/navigation_drawer_content_speeches</item>
+        <item>@string/navigation_drawer_content_calendar</item>
+    </string-array>
+
+    <string-array name="calendar_list_activity_content">
+        <item>@string/calendar_list_activity_content_all</item>
+        <item>@string/calendar_list_activity_content_press_conference</item>
+        <item>@string/calendar_list_activity_content_open_conference</item>
+        <item>@string/calendar_list_activity_content_open_questioning</item>
+        <item>@string/calendar_list_activity_content_open_meeting</item>
+        <item>@string/calendar_list_activity_content_open_consultation</item>
+        <item>@string/calendar_list_activity_content_open_seminar</item>
+    </string-array>
+</resources>

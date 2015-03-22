@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Sveriges Riksdag</string>
+
+    <string name="action_settings">Inställningar</string>
+    <string name="action_about">Om</string>
+
+    <string name="progress_bar_message">Loading&#8230;</string>
+
+    <!-- navigation drawer -->
+    <string name="drawer_open">Öppna</string>
+    <string name="drawer_close">Stäng</string>
+    <string name="navigation_drawer_content_document">Dokument</string>
+    <string name="navigation_drawer_content_members">Ledamöter</string>
+    <string name="navigation_drawer_content_voting">Voteringar</string>
+    <string name="navigation_drawer_content_speeches">Anföranden</string>
+    <string name="navigation_drawer_content_calendar">Kalender</string>
+
+    <!-- dialog fragments -->
+    <string name="about_dialog_fragment_title">Om Appen</string>
+    <string name="about_dialog_fragment_pos_btn">OK</string>
+    <string name="about_dialog_fragment_message">Denna app använder sig av information hämtad
+    från Sveriges Riksdags öppna data.
+        Riksdagens öppna data består av cirka 200 000 dokument och statusuppgifter från så långt
+        bak i tiden som 1961.\n\n\nUtvecklad av Marcus Jacobsson</string>
+
+    <!-- calendar -->
+    <string name="calendar_fragment_chamber">Kammaren</string>
+    <string name="calendar_fragment_committee">Utkotten och EU-nämnden</string>
+    <string name="calendar_fragment_other">Övriga kalenderhändelser</string>
+
+    <string name="calendar_list_activity_content_all">Alla sammanträden</string>
+    <string name="calendar_list_activity_content_press_conference">Presskonferens</string>
+    <string name="calendar_list_activity_content_open_conference">Öppen presskonferens</string>
+    <string name="calendar_list_activity_content_open_questioning">Öppen ufrågning</string>
+    <string name="calendar_list_activity_content_open_meeting">Öppet sammanträde</string>
+    <string name="calendar_list_activity_content_open_consultation">Öppet samråd</string>
+    <string name="calendar_list_activity_content_open_seminar">Öppet seminarium</string>
+
+    <!-- urls -->
+    <string name="url_calendar_chamber">http://data.riksdagen.se/kalender/?org=kamm&amp;utformat=xml</string>
+    <string name="url_calendar_committee_all">http://data.riksdagen.se/kalender/?org=AU&amp;org=BoU&amp;org=CU&amp;org=eun&amp;org=FiU&amp;org=F&#214;&amp;org=JoU&amp;org=JuU&amp;org=KU&amp;org=KrU&amp;org=LU&amp;org=MjU&amp;org=NU&amp;org=JuSoU&amp;org=KUU&amp;org=UF&#214;U&amp;org=UMJU&amp;org=USoU&amp;org=SkU&amp;org=SfU&amp;org=SoU&amp;org=TU&amp;org=UbU&amp;org=UU&amp;utformat=xml</string>
+    <string name="url_calendar_committee_press_conference">http://data.riksdagen.se/kalender/?akt=pk&amp;utformat=xml</string>
+    <string name="url_calendar_committee_open_press_conference">http://data.riksdagen.se/kalender/?akt=ko&amp;utformat=xml</string>
+    <string name="url_calendar_committee_open_questioning">http://data.riksdagen.se/kalender/?akt=ou&amp;utformat=xml</string>
+    <string name="url_calendar_committee_open_meeting">http://data.riksdagen.se/kalender/?akt=st&amp;utformat=xml</string>
+    <string name="url_calendar_committee_open_consultation">http://data.riksdagen.se/kalender/?akt=os&amp;utformat=xml</string>
+    <string name="url_calendar_committee_open_seminar">http://data.riksdagen.se/kalender/?akt=se&amp;utformat=xml</string>
+    <string name="url_calendar_other">http://data.riksdagen.se/kalender/?akt=be&amp;akt=ib&amp;akt=re&amp;akt=ur&amp;akt=ub&amp;akt=oh&amp;utformat=xml</string>
+</resources>
