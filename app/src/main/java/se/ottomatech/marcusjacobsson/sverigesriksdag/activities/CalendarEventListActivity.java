@@ -1,6 +1,7 @@
 package se.ottomatech.marcusjacobsson.sverigesriksdag.activities;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -28,6 +29,8 @@ public class CalendarEventListActivity extends ListActivity implements ListView.
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+        Intent i = new Intent(this, CalendarEventDetails.class);
+        i.putExtra("calendarPojo", (CalendarPojo)getListView().getItemAtPosition(position));
+        startActivity(i);
     }
 }

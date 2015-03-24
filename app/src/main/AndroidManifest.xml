@@ -21,6 +21,7 @@
 
         <activity android:name=".activities.CalendarCommitteeMenuListActivity"></activity>
         <activity android:name=".activities.CalendarEventListActivity"></activity>
+        <activity android:name=".activities.CalendarEventDetails"></activity>
     </application>
 
 </manifest>

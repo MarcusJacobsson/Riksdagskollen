@@ -9,6 +9,7 @@ import java.util.Locale;
  * Created by Marcus Jacobsson on 2015-03-22.
  */
 public class RiksdagskollenTimeUtil {
+
     public static String getTimeFromDateString(String date) {
         SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd'T'HHmmss", Locale.getDefault());
         Date newDate = null;
@@ -21,8 +22,36 @@ public class RiksdagskollenTimeUtil {
         String result;
 
         result = format.format(newDate);
+        return result;
+    }
 
+    public static String getDateFromDateString(String date){
+        SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd'T'HHmmss", Locale.getDefault());
+        Date newDate = null;
+        try {
+            newDate = format.parse(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        format = new SimpleDateFormat("dd/MM", Locale.getDefault());
+        String result;
 
+        result = format.format(newDate);
+        return result;
+    }
+
+    public static String formatDateString(String date){
+        SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd'T'HHmmss", Locale.getDefault());
+        Date newDate = null;
+        try {
+            newDate = format.parse(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        format = new SimpleDateFormat("dd MMM' 'HH:mm", Locale.getDefault());
+        String result;
+
+        result = format.format(newDate);
         return result;
     }
 }

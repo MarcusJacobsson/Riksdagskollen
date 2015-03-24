@@ -3,6 +3,7 @@
 
     <string name="action_settings">Inställningar</string>
     <string name="action_about">Om</string>
+    <string name="action_help">Hjälp</string>
 
     <string name="progress_bar_message">Loading&#8230;</string>
 
@@ -46,4 +47,24 @@
     <string name="url_calendar_committee_open_consultation">http://data.riksdagen.se/kalender/?akt=os&amp;utformat=xml</string>
     <string name="url_calendar_committee_open_seminar">http://data.riksdagen.se/kalender/?akt=se&amp;utformat=xml</string>
     <string name="url_calendar_other">http://data.riksdagen.se/kalender/?akt=be&amp;akt=ib&amp;akt=re&amp;akt=ur&amp;akt=ub&amp;akt=oh&amp;utformat=xml</string>
+
+    <!-- activity_calendar_details.xml -->
+    <string name="activity_calendar_details_created">"Skapad: "</string>
+    <string name="activity_calendar_details_last_modified">"Senast ändrad: "</string>
+    <string name="activity_calendar_details_location">"Plats: "</string>
+    <string name="activity_calendar_details_comment">"Kommentar: "</string>
+    <string name="activity_calendar_details_summary">"Summering: "</string>
+    <string name="activity_calendar_details_description">Beskrivning:</string>
+    
+    <!-- HelpFragment -->
+    <string name="help_fragment_documents">Dokument</string>
+    <string name="help_fragment_members">Ledamöter</string>
+    <string name="help_fragment_voting">Voteringar</string>
+    <string name="help_fragment_speeches">Anföranden</string>
+    <string name="help_fragment_calendar">Kalender</string>
+    <string name="help_fragment_documents_details">I dokumenten ingår bland annat riksdagsbeslut, regeringens propositioner, ledamöternas motioner och protokoll från kammaren. Vissa dokumenttyper finns från 1961.</string>
+    <string name="help_fragment_members_details">Information om alla ledamöter som sitter eller har suttit i riksdagen finns från omkring 1990. Det finns uppgifter om ledamoten, olika uppdrag och vad ledamoten sagt och gjort.</string>
+    <string name="help_fragment_voting_details">När kammarens ledamöter är oense i en fråga kan det bli omröstning, votering. Uppgifter om voteringarna finns från riksmötet 2002/03 och framåt.</string>
+    <string name="help_fragment_speeches_details">De tal som riksdagsledamöterna håller under debatter i kammaren kallas anföranden. Anföranden finns från riksmötet 1993/94 och framåt.</string>
+    <string name="help_fragment_calendar_details">I kalenderinformationen ingår alla debatter, beslut och andra aktiviteter i kammaren samt utskottens och EU-nämndens sammanträden, öppna utfrågningar och utlandsbesök.</string>
 </resources>

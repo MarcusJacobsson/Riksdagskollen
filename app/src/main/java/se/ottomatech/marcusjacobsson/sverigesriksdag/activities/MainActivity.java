@@ -30,6 +30,7 @@ import java.util.Locale;
 import se.ottomatech.marcusjacobsson.sverigesriksdag.R;
 import se.ottomatech.marcusjacobsson.sverigesriksdag.dialogfragments.AboutDialogFragment;
 import se.ottomatech.marcusjacobsson.sverigesriksdag.fragments.CalendarFragmentMain;
+import se.ottomatech.marcusjacobsson.sverigesriksdag.fragments.HelpFragment;
 import se.ottomatech.marcusjacobsson.sverigesriksdag.pojo.CalendarPojo;
 
 
@@ -47,6 +48,14 @@ public class MainActivity extends ActionBarActivity implements ListView.OnItemCl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setUpComponents();
+        showHelpFragment();
+    }
+
+    private void showHelpFragment(){
+        HelpFragment helpFragment = new HelpFragment();
+        FragmentTransaction t = getSupportFragmentManager().beginTransaction();
+        t.replace(R.id.content_frame, helpFragment);
+        t.commit();
     }
 
     private void setUpComponents() {
@@ -153,7 +162,7 @@ public class MainActivity extends ActionBarActivity implements ListView.OnItemCl
             String dtStart = cal.getDtStart();
             try {
                 Date date = format.parse(dtStart);
-                activeDates.put(date, R.color.blue);
+                activeDates.put(date, R.color.red);
             } catch (ParseException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -166,7 +175,7 @@ public class MainActivity extends ActionBarActivity implements ListView.OnItemCl
         args.putInt(CaldroidFragment.MONTH, cal.get(Calendar.MONTH) + 1);
         args.putInt(CaldroidFragment.YEAR, cal.get(Calendar.YEAR));
         caldroidFragment.setArguments(args);
-        caldroidFragment.setBackgroundResourceForDates(activeDates);
+        caldroidFragment.setTextColorForDates(activeDates);
 
         final CaldroidListener listener = new CaldroidListener() {
 
@@ -176,9 +185,11 @@ public class MainActivity extends ActionBarActivity implements ListView.OnItemCl
                 int size = matchingDates.size();
                 if(size != 0){
                     if(size == 1){
+                        Intent i = new Intent(view.getContext(), CalendarEventDetails.class);
+                        i.putExtra("calendarPojo",matchingDates.get(0));
+                        startActivity(i);
                         System.out.println("Skapa dialog direkt");
                     }else if(size > 1){
-                        System.out.println("visa lista först");
                         Intent i = new Intent(getApplicationContext(), CalendarEventListActivity.class);
                         i.putParcelableArrayListExtra("events", matchingDates);
                         startActivity(i);
@@ -283,6 +294,10 @@ public class MainActivity extends ActionBarActivity implements ListView.OnItemCl
                 case R.id.action_settings:
 
                     break;
+
+                case R.id.action_help:
+                    showHelpFragment();
+                    break;
             }
 
             return super.onOptionsItemSelected(item);
@@ -296,6 +311,7 @@ public class MainActivity extends ActionBarActivity implements ListView.OnItemCl
         boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
         menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
         menu.findItem(R.id.action_about).setVisible(!drawerOpen);
+        menu.findItem(R.id.action_help).setVisible(!drawerOpen);
         return super.onPrepareOptionsMenu(menu);
     }
 
