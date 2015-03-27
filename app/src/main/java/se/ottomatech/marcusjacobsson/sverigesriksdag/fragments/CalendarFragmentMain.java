@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import se.ottomatech.marcusjacobsson.sverigesriksdag.R;
 import se.ottomatech.marcusjacobsson.sverigesriksdag.activities.CalendarCommitteeMenuListActivity;
 import se.ottomatech.marcusjacobsson.sverigesriksdag.pojo.CalendarPojo;
-import se.ottomatech.marcusjacobsson.sverigesriksdag.xmlparsers.CalendarXmlParser;
+import se.ottomatech.marcusjacobsson.sverigesriksdag.parsers.CalendarXmlParser;
 
 /**
  * Created by Marcus Jacobsson on 2015-03-20.

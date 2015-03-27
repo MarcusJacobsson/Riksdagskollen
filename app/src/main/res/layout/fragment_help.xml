@@ -11,7 +11,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:src="@mipmap/ic_launcher"
+            android:src="@mipmap/dokument_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -42,7 +42,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:src="@mipmap/ic_launcher"
+            android:src="@mipmap/ledamot_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -73,7 +73,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:src="@mipmap/ic_launcher"
+            android:src="@mipmap/voting_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -104,7 +104,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:src="@mipmap/ic_launcher"
+            android:src="@mipmap/speech_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -135,7 +135,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:src="@mipmap/ic_launcher"
+            android:src="@mipmap/calendar_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

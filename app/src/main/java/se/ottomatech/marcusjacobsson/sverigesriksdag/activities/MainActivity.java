@@ -31,6 +31,7 @@ import se.ottomatech.marcusjacobsson.sverigesriksdag.R;
 import se.ottomatech.marcusjacobsson.sverigesriksdag.dialogfragments.AboutDialogFragment;
 import se.ottomatech.marcusjacobsson.sverigesriksdag.fragments.CalendarFragmentMain;
 import se.ottomatech.marcusjacobsson.sverigesriksdag.fragments.HelpFragment;
+import se.ottomatech.marcusjacobsson.sverigesriksdag.fragments.MemberFragment;
 import se.ottomatech.marcusjacobsson.sverigesriksdag.pojo.CalendarPojo;
 
 
@@ -145,6 +146,13 @@ public class MainActivity extends ActionBarActivity implements ListView.OnItemCl
                 t.replace(R.id.content_frame, calendarFragmentMain);
                 t.commit();
                 break;
+
+            case "Ledamöter":
+                MemberFragment memberFragment = new MemberFragment();
+                FragmentTransaction tt = getSupportFragmentManager().beginTransaction();
+                tt.replace(R.id.content_frame, memberFragment);
+                tt.commit();
+                break;
         }
 
         // Highlight the selected item, update the title, and close the drawer
@@ -216,11 +224,13 @@ public class MainActivity extends ActionBarActivity implements ListView.OnItemCl
         };
 
         caldroidFragment.setCaldroidListener(listener);
+
+        caldroidFragment.show(getSupportFragmentManager(), "caldroid");
         // Insert the fragment by replacing any existing fragment
-        android.support.v4.app.FragmentTransaction t = getSupportFragmentManager().beginTransaction();
+/*        android.support.v4.app.FragmentTransaction t = getSupportFragmentManager().beginTransaction();
         t.addToBackStack(null);
         t.replace(R.id.content_frame, caldroidFragment);
-        t.commit();
+        t.commit();*/
     }
 
     private ArrayList<CalendarPojo> getMatchingDates(Date date, ArrayList<CalendarPojo> allEvents) {

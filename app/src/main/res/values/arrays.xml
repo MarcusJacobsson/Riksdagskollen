@@ -17,4 +17,49 @@
         <item>@string/calendar_list_activity_content_open_consultation</item>
         <item>@string/calendar_list_activity_content_open_seminar</item>
     </string-array>
+
+    <string-array name="member_fragment_spinner_party_items">
+        <item>@string/member_fragment_spinner_party_items_default</item>
+        <item>@string/member_fragment_spinner_party_items_soc</item>
+        <item>@string/member_fragment_spinner_party_items_m</item>
+        <item>@string/member_fragment_spinner_party_items_mp</item>
+        <item>@string/member_fragment_spinner_party_items_fp</item>
+        <item>@string/member_fragment_spinner_party_items_c</item>
+        <item>@string/member_fragment_spinner_party_items_sd</item>
+        <item>@string/member_fragment_spinner_party_items_v</item>
+        <item>@string/member_fragment_spinner_party_items_kd</item>
+    </string-array>
+
+    <string-array name="member_fragment_spinner_district_items">
+        <item>@string/member_fragment_spinner_district_items_default</item>
+        <item>@string/member_fragment_spinner_district_items_blekinge</item>
+        <item>@string/member_fragment_spinner_district_items_dalarna</item>
+        <item>@string/member_fragment_spinner_district_items_gotland</item>
+        <item>@string/member_fragment_spinner_district_items_gavleborg</item>
+        <item>@string/member_fragment_spinner_district_items_goteborg</item>
+        <item>@string/member_fragment_spinner_district_items_hallands</item>
+        <item>@string/member_fragment_spinner_district_items_jamtlands</item>
+        <item>@string/member_fragment_spinner_district_items_jonkoping</item>
+        <item>@string/member_fragment_spinner_district_items_kalmar</item>
+        <item>@string/member_fragment_spinner_district_items_kronoberg</item>
+        <item>@string/member_fragment_spinner_district_items_malmo</item>
+        <item>@string/member_fragment_spinner_district_items_norrbotten</item>
+        <item>@string/member_fragment_spinner_district_items_skane_norr_ost</item>
+        <item>@string/member_fragment_spinner_district_items_skane_soder</item>
+        <item>@string/member_fragment_spinner_district_items_skane_vast</item>
+        <item>@string/member_fragment_spinner_district_items_stockholm</item>
+        <item>@string/member_fragment_spinner_district_items_stockholm_lan</item>
+        <item>@string/member_fragment_spinner_district_items_sodermananlands</item>
+        <item>@string/member_fragment_spinner_district_items_uppsala</item>
+        <item>@string/member_fragment_spinner_district_items_varmlands</item>
+        <item>@string/member_fragment_spinner_district_items_vasterbotten</item>
+        <item>@string/member_fragment_spinner_district_items_vasternorrlands</item>
+        <item>@string/member_fragment_spinner_district_items_vastmanlands</item>
+        <item>@string/member_fragment_spinner_district_items_vastra_gotalands</item>
+        <item>@string/member_fragment_spinner_district_items_vastra_gotalands_soder</item>
+        <item>@string/member_fragment_spinner_district_items_vastra_gotalands_vast</item>
+        <item>@string/member_fragment_spinner_district_items_vastra_gotalands_ost</item>
+        <item>@string/member_fragment_spinner_district_items_orebro</item>
+        <item>@string/member_fragment_spinner_district_items_ostergotland</item>
+    </string-array>
 </resources>

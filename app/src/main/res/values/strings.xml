@@ -67,4 +67,72 @@
     <string name="help_fragment_voting_details">När kammarens ledamöter är oense i en fråga kan det bli omröstning, votering. Uppgifter om voteringarna finns från riksmötet 2002/03 och framåt.</string>
     <string name="help_fragment_speeches_details">De tal som riksdagsledamöterna håller under debatter i kammaren kallas anföranden. Anföranden finns från riksmötet 1993/94 och framåt.</string>
     <string name="help_fragment_calendar_details">I kalenderinformationen ingår alla debatter, beslut och andra aktiviteter i kammaren samt utskottens och EU-nämndens sammanträden, öppna utfrågningar och utlandsbesök.</string>
+
+    <!-- MemberFragment -->
+    <string name="member_fragment_search">Hitta</string>
+    <string name="member_fragment_first_name">"Förnamn: "</string>
+    <string name="member_fragment_last_name">"Efternamn: "</string>
+    <string name="member_fragment_first_name_hint">Ange förnamn (valfritt)</string>
+    <string name="member_fragment_last_name_hint">Ange efternamn (valfritt)</string>
+    <string name="member_fragment_party">"Parti: </string>
+    <string name="member_fragment_district">"Valkrets: "</string>
+
+    <!-- member_fragment_spinner_party_items -->
+    <string name="member_fragment_spinner_party_items_default">Välj (valfritt)</string>
+    <string name="member_fragment_spinner_party_items_soc">Socialdemokraterna</string>
+    <string name="member_fragment_spinner_party_items_m">Moderata samlingspartiet</string>
+    <string name="member_fragment_spinner_party_items_mp">Miljöpartiet</string>
+    <string name="member_fragment_spinner_party_items_fp">Folkpartiet</string>
+    <string name="member_fragment_spinner_party_items_c">Centerpartiet</string>
+    <string name="member_fragment_spinner_party_items_sd">Sverigedemokraterna</string>
+    <string name="member_fragment_spinner_party_items_v">Vänsterpartiet</string>
+    <string name="member_fragment_spinner_party_items_kd">Kristdemokraterna</string>
+
+    <!-- member_fragment_spinner_district_items -->
+    <string name="member_fragment_spinner_district_items_default">Välj (valfritt)</string>
+    <string name="member_fragment_spinner_district_items_blekinge">Blekinge län</string>
+    <string name="member_fragment_spinner_district_items_dalarna">Dalarnas län</string>
+    <string name="member_fragment_spinner_district_items_gotland">Gotlands län</string>
+    <string name="member_fragment_spinner_district_items_gavleborg">Gävleborgs län</string>
+    <string name="member_fragment_spinner_district_items_goteborg">Göteborgs kommun</string>
+    <string name="member_fragment_spinner_district_items_hallands">Hallands län</string>
+    <string name="member_fragment_spinner_district_items_jamtlands">Jämtlands län</string>
+    <string name="member_fragment_spinner_district_items_jonkoping">Jönköpings län</string>
+    <string name="member_fragment_spinner_district_items_kalmar">Kalmars län</string>
+    <string name="member_fragment_spinner_district_items_kronoberg">Kronobergs län</string>
+    <string name="member_fragment_spinner_district_items_malmo">Malmö kommun</string>
+    <string name="member_fragment_spinner_district_items_norrbotten">Norrbottens kommun</string>
+    <string name="member_fragment_spinner_district_items_skane_norr_ost">Skåne läns norra och östra</string>
+    <string name="member_fragment_spinner_district_items_skane_soder">Skåne läns södra</string>
+    <string name="member_fragment_spinner_district_items_skane_vast">Skåne läns västra</string>
+    <string name="member_fragment_spinner_district_items_stockholm">Stockholms kommun</string>
+    <string name="member_fragment_spinner_district_items_stockholm_lan">Stockholms län</string>
+    <string name="member_fragment_spinner_district_items_sodermananlands">Södermanlands län</string>
+    <string name="member_fragment_spinner_district_items_uppsala">Uppsala län</string>
+    <string name="member_fragment_spinner_district_items_varmlands">Värmlands län</string>
+    <string name="member_fragment_spinner_district_items_vasterbotten">Västerbottens län</string>
+    <string name="member_fragment_spinner_district_items_vasternorrlands">Västernorrlands län</string>
+    <string name="member_fragment_spinner_district_items_vastmanlands">Västmanlands län</string>
+    <string name="member_fragment_spinner_district_items_vastra_gotalands">Västra Götalands läns norra</string>
+    <string name="member_fragment_spinner_district_items_vastra_gotalands_soder">Västra Götalands läns södra</string>
+    <string name="member_fragment_spinner_district_items_vastra_gotalands_vast">Västra Götalands läns västra</string>
+    <string name="member_fragment_spinner_district_items_vastra_gotalands_ost">Västra Götalands läns östra</string>
+    <string name="member_fragment_spinner_district_items_orebro">Örebro län</string>
+    <string name="member_fragment_spinner_district_items_ostergotland">Östergötlands län</string>
+
+    <!-- activity_member_details -->
+    <string name="activity_member_details_name">Namn:</string>
+    <string name="activity_member_details_born">Född:</string>
+    <string name="activity_member_details_sex">Kön:</string>
+    <string name="activity_member_details_party">Parti:</string>
+    <string name="activity_member_details_district">Distrikt:</string>
+    <string name="activity_member_details_status">Status:</string>
+    <string name="activity_member_details_assignments">Uppdrag:</string>
+    <string name="activity_member_details_send_email">Skicka mail med&#8230;</string>
+
+    <!-- member_assignment_list_item -->
+    <string name="member_assignment_list_item_role">Roll</string>
+    <string name="member_assignment_list_item_dt_start">Från</string>
+    <string name="member_assignment_list_item_dt_end">Till</string>
+
 </resources>

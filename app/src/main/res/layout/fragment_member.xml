@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_horizontal_margin">
+
+    <Button
+        android:id="@+id/btn_member_fragment_search"
+        android:text="@string/member_fragment_search"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_above="@id/btn_member_fragment_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/member_fragment_first_name"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/et_member_fragment_first_name"
+                android:hint="@string/member_fragment_first_name_hint"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/member_fragment_last_name"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/et_member_fragment_last_name"
+                android:hint="@string/member_fragment_last_name_hint"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/member_fragment_party"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/sp_member_fragment_party"
+                android:entries="@array/member_fragment_spinner_party_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/member_fragment_district"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/sp_member_fragment_district"
+                android:entries="@array/member_fragment_spinner_district_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                </Spinner>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

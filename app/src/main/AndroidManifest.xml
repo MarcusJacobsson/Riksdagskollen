@@ -3,6 +3,7 @@
     package="se.ottomatech.marcusjacobsson.sverigesriksdag">
 
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -22,6 +23,8 @@
         <activity android:name=".activities.CalendarCommitteeMenuListActivity"></activity>
         <activity android:name=".activities.CalendarEventListActivity"></activity>
         <activity android:name=".activities.CalendarEventDetails"></activity>
+        <activity android:name=".activities.MemberListActivity"></activity>
+        <activity android:name=".activities.MemberDetailsActivity"></activity>
     </application>
 
 </manifest>

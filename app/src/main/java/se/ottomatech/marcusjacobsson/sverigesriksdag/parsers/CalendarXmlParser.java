@@ -1,4 +1,4 @@
-package se.ottomatech.marcusjacobsson.sverigesriksdag.xmlparsers;
+package se.ottomatech.marcusjacobsson.sverigesriksdag.parsers;
 
 import android.util.Xml;
 
